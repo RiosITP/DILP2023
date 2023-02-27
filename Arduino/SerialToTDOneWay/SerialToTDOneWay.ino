@@ -6,7 +6,7 @@
 */
 
 void setup() {
-  // Wait for a Connection to TD 
+  // Wait for a serial Connection to TD. If theres no connection the sketch freezes
   while(!Serial);
   Serial.begin(9600);
   pinMode(2, INPUT_PULLUP);
@@ -22,6 +22,8 @@ void loop() {
   int light = analogRead(A1);
   int pot = analogRead(A2);
   
+  // print comma separated values, send \n control character at the end
+  // Serial.println() should also work
   Serial.print(b1);
   Serial.print(",");
   Serial.print(b2);
