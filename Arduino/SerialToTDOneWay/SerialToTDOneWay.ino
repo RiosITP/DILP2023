@@ -34,8 +34,6 @@ void loop() {
   Serial.print(",");
   Serial.print(light);
   Serial.print(",");
-  Serial.print(turns);
-  Serial.print(",");
   Serial.print(pot);
   Serial.print("\n");
 }
